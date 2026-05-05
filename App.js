@@ -1,10 +1,16 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { CardProduto } from './src/componentes/CardProduto';
+import { StyleSheet, Text, View } from 'react-native';
+
+import CardProduto from './componentes/CardProduto';
 
 export default function App() {
   return (
     <View style={styles.container}>
-    <Text styles={style.foto}>{imageM}</Text>
+      <CardProduto 
+      nome='banana'
+      preco={21}
+      categoria='frutas'
+      imagem={require('./assets/icon.png')}
+      />
     </View>
   );
 }
