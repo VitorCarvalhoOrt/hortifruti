@@ -1,0 +1,40 @@
+import {View, Text, StyleSheet} from 'react-native';
+
+export default function CardProduto({foto, nome, cargo, email}){
+    return(
+        //props
+    <View style={styles.container}>
+        <View style={styles.foto}>
+            <Text style={styles.textoFoto}>{foto}</Text>
+        </View>
+        
+        <View style={styles.textoContainer}>
+            <Text style={styles.textoDados}>Nome: {nome}</Text>
+            <Text style={styles.textoDados}>E-mail: {email}</Text>
+            <Text style={styles.textoDados}>Cargo: {cargo}</Text>
+        </View>
+    </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: 'cyan', width: '90%', height: 100, 
+        borderWidth: 1, marginBottom: 10, flexDirection: 'row'
+    }, foto: {
+        /*Para manter um circulo perfeito na imagem, 
+        devemos retirar o excesso aplicado na margem na largura do 
+        container. 
+        tamanho original: 100
+        tamanho apos a margem: 100 - 10(margemRigth) - 10 (margemRight)*/
+        borderRadius: 50, borderWidth: 1, width: 80, 
+        borderStyle: 'dashed', margin: 10, justifyContent: 'center'
+    }, textoFoto: {
+        alignSelf: 'center', fontStyle: 'italic', 
+        fontSize: 16, 
+    }, textoContainer: {
+        justifyContent: 'center',
+    }, textoDados: {
+        fontSize: 20, 
+    }
+})
