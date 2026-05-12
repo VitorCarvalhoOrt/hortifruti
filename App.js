@@ -9,7 +9,7 @@ export default function App() {
       nome='banana'
       preco={21}
       categoria='frutas'
-      imagem={require('./assets/icon.png')}
+      imagem={require('./assets/splash-icon.png')}
       />
     </View>
   );

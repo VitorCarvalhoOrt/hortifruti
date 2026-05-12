@@ -31,8 +31,9 @@ const styles = StyleSheet.create({
     },
     textoDados: {
         color: '#fff',
-        paddingBottom: 5,
-        marginLeft: 10
+        textAlign: 'center',
+        marginBottom: 4,
+        fontWeight: 'bold'
     },
     textoContainer: {
         height: 80,
