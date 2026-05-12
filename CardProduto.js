@@ -4,7 +4,7 @@ export default function CardProduto({nome, preco, categoria, imagem}){
     return(
         //props
     <View style={styles.container}>
-        <View style={styles.imagem}>
+        <View styScle={styles.imagem}>
             <Image source={imagem} style={styles.imagem}/>
         </View>
         
@@ -12,7 +12,7 @@ export default function CardProduto({nome, preco, categoria, imagem}){
             <Text style={styles.textoDados}>Nome: {nome}</Text>
             <Text style={styles.textoDados}>Preço: {preco}</Text>
             <Text style={styles.textoDados}>Categoria: {categoria}</Text>
-            
+
         </View>
     </View>
     );
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         flexDirection: 'row',
+        margin: 10,
     }, imagem: {
         borderRadius: 50,
         width: 80,

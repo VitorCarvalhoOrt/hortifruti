@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 import CardProduto from './CardProduto';
 import { useState } from 'react';
@@ -45,9 +45,9 @@ export default function App() {
             <Button color={selectedCategory === 'Verdura' ? 'black' : 'green'} title='Verduras' onPress={() => filtration('Verdura')} />
           </View>
         </View>
-        <View style={styles.items}>
-          {filtrada.map(item => <CardProduto nome={item.nome} preco={item.preco} categoria={item.categoria} imagem={item.imagem} />)}
-        </View>
+        <ScrollView style={styles.items} contentContainerStyle={styles.itemsContainer}>
+          {filtrada.map(item => <CardProduto key={item.nome} nome={item.nome} preco={item.preco} categoria={item.categoria} imagem={item.imagem} />)}
+        </ScrollView>
       </View>
     </View>
   );
@@ -70,11 +70,13 @@ const styles = StyleSheet.create({
     height: 200
   },
   items: {
-    gap: 20,
+    width: '100%',
+  },
+  itemsContainer: {
     padding: 20,
     flexDirection: 'row',
     justifyContent: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   title: {
     fontSize: 32,
