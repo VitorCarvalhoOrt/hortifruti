@@ -12,6 +12,7 @@ export default function CardProduto({nome, preco, categoria, imagem}){
             <Text style={styles.textoDados}>Nome: {nome}</Text>
             <Text style={styles.textoDados}>Preço: {preco}</Text>
             <Text style={styles.textoDados}>Categoria: {categoria}</Text>
+            
         </View>
     </View>
     );
